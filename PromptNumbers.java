@@ -25,6 +25,7 @@ Your numbers in backward order:
 8
 12
 */
+import java.util.Scanner;
 
 public class PromptNumbers {
 	public static void main(String[] args) {
@@ -32,25 +33,49 @@ public class PromptNumbers {
 		System.out.print("How many numbers will you enter? ");
 		int count = console.nextInt();
 		
+		int [] number = new int [count];
 		
-		for (int i = ???; i < ???; i++) {
+		System.out.print("Type a number: ");
+		for (int i = 0; i <count; i++) {
 			// your code goes here; store the numbers
-			System.out.print("Type a number: ");
-			
+			int input = console.nextInt();
+			number[i]=input;
 		}
 		
 		System.out.println();
 		System.out.println("Your numbers in forward order:");
 		
-		for (int i = ???; i < ???; i++) {
+		for (int i = 0; i < count; i++) {
+			System.out.println(number[i]);
+			
 			// your code goes here; print the numbers in forward order
 		
 		}
 
 		System.out.println();
 		System.out.println("Your numbers in backward order:");
+		for (int i = number.length-1; i>=0;i--)
+		{
+			System.out.println(number[i]);
+		}
 		
 		// your code goes here; print the numbers in backward order
 		
+	}
+	
+
+	public static void printForward(int [] forwardArray)
+	{
+		for (int i=0; i<forwardArray.length; i++)
+		{
+			System.out.println(forwardArray[i]);
+		}
+	}
+	public static void printBackward (int [] backArray)
+	{
+		for (int i = backArray.length-1; i>=0;i--)
+		{
+			System.out.println(backArray[i]);
+		}
 	}
 }
